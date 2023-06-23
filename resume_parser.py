@@ -25,7 +25,7 @@ class resumeParser():
             except:
                 logging.error('No resume data can be fetch from file')
                 return None
-        elif file.filePath.endswith('pdf'):
+        elif 'pdf' in file.type.lower()::
             try:
                 # extract_text_from_pdf returns the extracted text from the PDF file
                 resume_lines, raw_text = informationExtractor.extract_text_from_pdf(file.filePath)
