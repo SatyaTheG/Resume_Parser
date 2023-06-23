@@ -21,15 +21,14 @@ def app():
             with st.spinner('Analyzing resume... :mag_right::hourglass_flowing_sand:'):
                 dict = obj.extract_data_from_file(uploaded_file)
 
-                for key, value in dict.items():
-                    with st.expander(f' Name: **{dict["name"]}** '):
-                        st.markdown(
-                            f'**Email:** {dict["email"]} :envelope_with_arrow:')
-                        st.markdown(
-                            f'**Highlights:** {dict["phone"]} :star2:')
-                        st.markdown('#### **Skills:** ')
-                        for i in dict["skills"].split(','):
-                            st.markdown(f'* {i} ')
+                with st.expander(f' Name: **{dict["name"]}** '):
+                    st.markdown(
+                        f'**Email:** {dict["email"]} :envelope_with_arrow:')
+                    st.markdown(
+                        f'**Highlights:** {dict["phone"]} :star2:')
+                    st.markdown('#### **Skills:** ')
+                    for i in dict["skills"].split(','):
+                        st.markdown(f'* {i} ')
 
         except Exception as e:
             st.write('Error: Unable to parse the resume ', e)
