@@ -21,11 +21,11 @@ def app():
             with st.spinner('Analyzing resume... :mag_right::hourglass_flowing_sand:'):
                 dict = obj.extract_data_from_file(uploaded_file)
 
-                with st.expander(f' Name: **{dict["name"]}** '):
+                with st.expander(f' Name: **dict["name"]** '):
                     st.markdown(
-                        f'**Email:** {dict["email"]} :envelope_with_arrow:')
+                        f'**Email:** dict["email"] :envelope_with_arrow:')
                     st.markdown(
-                        f'**Highlights:** {dict["phone"]} :star2:')
+                        f'**Highlights:** dict["phone"] :star2:')
                     st.markdown('#### **Skills:** ')
                     for i in dict["skills"].split(','):
                         st.markdown(f'* {i} ')
