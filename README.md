@@ -1,8 +1,25 @@
-# Resume Parser
-
+# Resume Parser🕵️
 The project aims to develop a machine learning-based solution for automated resume detection and extraction. With the increasing volume of job applications, it becomes challenging for recruiters to manually review and extract information from each resume. This project seeks to streamline and expedite the resume screening process by leveraging machine learning algorithms.
 
 The system will utilize state-of-the-art natural language processing (NLP) techniques and machine learning models to analyze and extract relevant information from resumes using SpaCy, Scikit-Learn etc.
+
+## 👨‍💼🤖 Don't believe us?
+
+🤣 We could tell you about how Resume Miner helped a company find their next CEO, but that would just be bragging. Instead, here are some more modest examples:
+
+👨‍💼 **Hiring manager** : "I used to spend hours reading through resumes, but now with Resume Miner, I can find the perfect candidate in just minutes! It's like having a personal assistant that never sleeps."
+
+👩‍💻 **Recruiter**: "I love using Resume Miner to find top-notch candidates. It's like a metal detector for resumes - it helps me uncover hidden gems that I might have missed otherwise."
+
+🕵️‍♂️ **Detective**: "Okay, so I'm not actually a detective, but sometimes it feels like it when I'm trying to find the right candidate for a job. With Resume Miner, it's like I have X-ray vision - I can see right through a resume and find the information I need."
+
+See? Even fictional characters can benefit from Resume Miner! Give it a try and see for yourself. 😉
+
+## Clone Repo And use it
+* Clone resume_miner repo using below command
+```git
+git clone https://github.com/SatyaTheG/Resume_Parser.git
+```
 
 ## Installation Steps
 
