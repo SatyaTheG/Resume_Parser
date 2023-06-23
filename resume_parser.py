@@ -5,7 +5,7 @@ from information_extractor import informationExtractor
 class resumeParser():
     # This is the main file from where execution is starting
     def extract_data_from_file(self, file):
-        if 'doc' in file.type.lower():
+        if file.filePath.endswith('doc'):
             try:
                 # extract_text_from_pdf returns the extracted text from the PDF file
                 resume_lines, raw_text = informationExtractor.extract_text_from_document(file.filePath)
@@ -15,7 +15,7 @@ class resumeParser():
             except:
                 logging.error('No resume data can be fetch from file')
                 return None
-        elif 'docx' in file.type.lower():
+        elif file.filePath.endswith('docx'):
             try:
                 # extract_text_from_pdf returns the extracted text from the PDF file
                 resume_lines, raw_text = informationExtractor.extract_text_from_document(file.filePath)
@@ -25,7 +25,7 @@ class resumeParser():
             except:
                 logging.error('No resume data can be fetch from file')
                 return None
-        elif 'pdf' in file.type.lower():
+        elif file.filePath.endswith('pdf'):
             try:
                 # extract_text_from_pdf returns the extracted text from the PDF file
                 resume_lines, raw_text = informationExtractor.extract_text_from_pdf(file.filePath)
