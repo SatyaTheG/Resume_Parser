@@ -50,14 +50,3 @@ val_features = vectorizer.transform(val_data)
 # Training a logistic regression model
 model = LogisticRegression(max_iter=1000)
 model.fit(train_features, train_labels)
-
-# Predicting labels for the validation set
-# val_predictions = model.predict(val_features)
-
-# Evaluating the model
-# accuracy = accuracy_score(val_labels, val_predictions)
-# print("Validation Accuracy:", accuracy)
-
-# pdf_text = ['harshvi']
-# X = vectorizer.transform(pdf_text)
-# print(model.predict(X))
