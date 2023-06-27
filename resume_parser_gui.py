@@ -4,11 +4,7 @@ from tkinter import filedialog
 import tkinter as tk
 from tkinter import ttk
 from resume_parser import resumeParser
-
-def write_list_to_csv(data_list, filename):
-    with open(filename, 'a+', newline='', errors='ignore') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerows(data_list)
+from app import fileInformation
 
 def prerec(old):
     file_types = (("PDF files", "*.pdf"), ("All files","*.*"))
@@ -37,10 +33,12 @@ def prerec(old):
     table.heading("Skills", text="Skills")
         
     for file in file_path:
+        # FILES = [[]]
+        file = fileInformation(file, ['name', 'email', 'phone', 'skills'])
         object = resumeParser()
-        X = object.read_file(file)
-        table.insert("", tk.END, text="1", values=(file.split('/')[-1], X['name'], X['email'], X['phone'], X['skills']))
-        
+        X = object.extract_data_from_file(file)
+        table.insert("", tk.END, text="1", values=(file.filePath.split('/')[-1], X['name'], X['email'], X['phone'], X['skills']))
+
     table.configure(height=16)
     table.pack()
     window.mainloop()
